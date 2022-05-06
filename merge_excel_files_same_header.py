@@ -3,10 +3,10 @@ from pathlib import Path
 
 #iterage over all files in the directory
 
-dir = r'C:\Users\Chris\Desktop\Python Scripts\merge_excel_files_same_header\merge_excel_files_same_header\source csvs'
-output_csv = r'C:\Users\Chris\Desktop\Python Scripts\merge_excel_files_same_header\merge_excel_files_same_header\output csv\merged_csv.csv'
+project_dir = os.path.dirname(__file__)
+dir = os.path.dirname(__file__)+r'\source csvs'
+output_csv = os.path.dirname(__file__)+r'\output csv\merged_csv.csv'
 csv_dictionary = []
-keys = None
 
 def add_csv_contents(csv_in):
     with open(csv_in, newline='') as csv_file:
